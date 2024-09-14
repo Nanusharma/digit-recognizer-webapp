@@ -1,4 +1,6 @@
 venv
-index.html
-styles.css
 app.py
+model.pkl
+requirement.txt
+E:\REAL_TIME_PROJECT\static
+E:\REAL_TIME_PROJECT\templates
