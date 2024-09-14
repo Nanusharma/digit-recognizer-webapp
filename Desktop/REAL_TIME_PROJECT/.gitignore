@@ -1,2 +1,7 @@
 /venv
+/static
+/templates
+/app.py
+/model.pkl
+/requirement.txt
 
