@@ -3,8 +3,8 @@ const ctx = canvas.getContext('2d');
 const smallCanvas = document.createElement('canvas');
 const smallCtx = smallCanvas.getContext('2d');
 
-smallCanvas.width = 28;
-smallCanvas.height = 28;
+smallCanvas.width = 50;
+smallCanvas.height = 50;
 
 function drawGrid() {
   ctx.strokeStyle = 'white';
