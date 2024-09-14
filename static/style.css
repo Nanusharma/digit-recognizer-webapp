@@ -1,0 +1,24 @@
+button {
+    margin-top: 20px;
+    width: 280px; /* set the width of the buttons */
+    height: 30px; /* set the height of the buttons */
+    font-size: 20px; /* set the font size of the buttons */
+  }
+  
+  #canvas {
+    border: 5px solid rgb(255, 255, 255);
+    cursor: crosshair;
+  }
+  
+  #container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  #predictionResult {
+    font-size: 24px;
+    font-weight: bold;
+    color: yellow;
+}
