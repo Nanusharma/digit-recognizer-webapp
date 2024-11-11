@@ -196,6 +196,7 @@ function clearCanvas() {
 }
 
 // Save as JPG function
+// Save as JPG function
 function saveAsJPG() {
     // Show loading state
     const predictionResult = document.getElementById('predictionResult');
@@ -203,14 +204,18 @@ function saveAsJPG() {
 
     // Convert canvas to JPG data URL
     const dataURL = canvas.toDataURL('image/jpeg');
-    
+
+    // Create a FormData object to hold both audio and image data
+    const formData = new FormData();
+    formData.append('image', dataURL); // Append canvas image data
+
+    // If you have audio data, you can also append it here
+    // formData.append('audio', audioBlob, 'recording.wav'); // Uncomment if you want to send audio too
+
     // Send to Flask backend
-    fetch('/save-drawing', {
+    fetch('/upload', {
         method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ imageData: dataURL })
+        body: formData
     })
     .then(response => response.json())
     .then(data => {
@@ -233,6 +238,5 @@ function saveAsJPG() {
         }, 3000);
     });
 }
-
 // Initialize canvas when page loads
 document.addEventListener('DOMContentLoaded', initCanvas);
