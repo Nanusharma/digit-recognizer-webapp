@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesMain.css') }}">
+</head>
+<body>
+    <h1>Select an Option</h1>
+    <div class="button-container">
+        <!-- <button onclick="navigateTo('\templates\index.html')">Write</button>
+        <button onclick="navigateTo('index2.html')">Upload Image</button>
+        <button onclick="navigateTo('index3.html')">Audio</button> -->
+        <button onclick="window.location.href='/write'">Write</button>
+        <button onclick="window.location.href='/upload-image'">Upload Image</button>
+        <button onclick="window.location.href='/audio'">Audio</button>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

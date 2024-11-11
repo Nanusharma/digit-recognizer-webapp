@@ -1,0 +1,50 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digit Recognition</title> -->
+    <!-- Link to the CSS file using Flask's url_for -->
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='stylesCanvas.css') }}">
+</head>
+<body style="background-color: rgb(0, 0, 0);">
+    <div id="container">
+        <h1 style="color: white;">Digit Recognition</h1>
+        <canvas id="canvas" width="280" height="280"></canvas>
+        <button onclick="clearCanvas()">Clear</button>
+        <button onclick="getPixelValues()">Get Pixel Values</button>
+        <p id="predictionResult" style="color: rgb(255, 255, 255); margin-top: 20px;"></p>
+         -->
+        <!-- Display the pixel values here -->
+        <!-- <pre id="pixelValues" style="color: white; background-color: black; margin-top: 20px;"></pre> Visible and styled -->
+    <!-- </div> -->
+    <!-- Link to the JavaScript file using Flask's url_for -->
+    <!-- <script src="{{ url_for('static', filename='scriptCanvas.js') }}"></script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drawing Canvas</title>
+    <link href="https://fonts.googleapis.com/css?family=Exo:100" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesCanvas.css') }}">
+</head>
+<body>
+    <div class="background-overlay"></div>
+    <div id="container">
+        <h1>Drawing Canvas</h1>
+        <div class="canvas-wrapper">
+            <canvas id="canvas"></canvas>
+        </div>
+        <div class="button-container">
+            <button onclick="clearCanvas()">Clear Canvas</button>
+            <button onclick="saveAsJPG()">Generate JPG</button>
+        </div>
+        <p id="predictionResult"></p>
+    </div>
+    <script src="{{ url_for('static', filename='scriptCanvas.js') }}"></script>
+</body>
+</html>

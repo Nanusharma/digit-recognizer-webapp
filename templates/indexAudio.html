@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Recorder</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesAudio.css') }}">
+</head>
+<body>
+    <h1>Audio Recorder</h1>
+    <div class="controls">
+        <button id="startRecord">Start Recording</button>
+        <button id="stopRecord" disabled>Stop Recording</button>
+        <button id="uploadAudio" disabled>Upload</button>
+    </div>
+    <audio id="audioPlayback" controls></audio>
+    <!-- <a id="downloadLink" style="display: none;">Download </a> -->
+
+    <script src="{{ url_for('static', filename='scriptAudio.js') }}"></script>
+</body>
+</html>
