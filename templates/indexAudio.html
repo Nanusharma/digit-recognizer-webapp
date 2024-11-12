@@ -11,10 +11,11 @@
     <div class="controls">
         <button id="startRecord">Start Recording</button>
         <button id="stopRecord" disabled>Stop Recording</button>
-        <button id="uploadAudio" disabled>Upload</button>
+        <button id="uploadAudio" disabled>Upload Recorded Audio</button>
+        <input type="file" id="fileInput" accept="audio/*">
+        <button id="uploadFileAudio" disabled>Upload Selected Audio</button>
     </div>
     <audio id="audioPlayback" controls></audio>
-    <!-- <a id="downloadLink" style="display: none;">Download </a> -->
 
     <script src="{{ url_for('static', filename='scriptAudio.js') }}"></script>
 </body>
